@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('clsrealestate', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router'])
+angular.module('clsrealestate', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
@@ -18,7 +18,6 @@ angular.module('clsrealestate', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
         templateUrl: 'app/views/services.html',
         controller: 'ServicesCtrl'
       });
-
 
     $urlRouterProvider.otherwise('/');
   })
