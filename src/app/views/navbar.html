@@ -1,0 +1,11 @@
+<nav class="navbar" ng-controller="HeaderCtrl">
+  <ul>
+    <li ng-class="{active:isActive('/')}"><a ng-href="#/">Home</a></li>
+    <li ng-class="{active:isActive('/about')}"><a ng-href="#/about">About</a></li>
+    <li ng-class="{active:isActive('/services')}"><a ng-href="#/services">Services</a></li>
+  </ul>
+
+  <ul>
+    <li><a ng-href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</a></li>
+  </ul>
+</nav>
