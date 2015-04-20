@@ -21,22 +21,30 @@
 
 
 @keyframes draw {
+//  0%   { fill-opacity: 0; }
+//  100% { fill-opacity: 1; }
   to {
     stroke-dashoffset: 0;
   }
 }
 @-webkit-keyframes draw {
+//  0%   { fill-opacity: 0; }
+//  100% { fill-opacity: 1; }
   to {
     stroke-dashoffset: 0;
   }
 }
 
 @-moz-keyframes draw {
+//  0%   { fill-opacity: 0; }
+//  100% { fill-opacity: 1; }
   to {
     stroke-dashoffset: 0;
   }
 }
 @-o-keyframes draw {
+//  0%   { fill-opacity: 0; }
+//  100% { fill-opacity: 1; }
   to {
     stroke-dashoffset: 0;
   }
@@ -47,7 +55,7 @@
 
 //Base style imports
 @import "styles/variables";
-@import "styles/small";
+//@import "styles/small";
 
 @media (min-width: 768px) {
   @import "styles/large";

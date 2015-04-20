@@ -1,5 +1,18 @@
 @import "variables";
 
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+
 a {
   color: inherit;
 }
@@ -7,7 +20,26 @@ a {
 .content-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px;
+  .home-about {
+    display: table;
+//    height: 250px;
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .list-container {
+    width: 50%;
+    float: left;
+//    padding: 20px;
+    min-height: 600px;
+    .content-block {
+      margin-top: 330px;
+      button {
+        padding: 10px 15px;
+      }
+    }
+  }
 }
 
 navbar {
@@ -35,6 +67,53 @@ navbar {
     height: 120px !important;
 //    background-color: rgba(255,255,255,.7);
     margin-left: 257px;
+    table {
+      .open-col {
+        height: 38px;
+        margin-top: 2px;
+        width: 99%;
+//        padding-right: 0 !important;
+        span {
+          margin-top: 2px;
+          background-color: rgba(255,255,255,.7);
+          height: 38px;
+          width: 100%;
+          display: block;
+        }
+      }
+      tr {
+        td {
+
+          &.title {
+            background-color: rgba(255,255,255, .7);
+            display: block;
+            height: 80px;
+            padding: 6px 2px 6px 10px;
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: draw 7s linear forwards;
+            -webkit-animation: draw 7s linear forwards;
+            -moz-animation: draw 7s linear forwards;
+            -o-animation: draw 7s linear forwards;
+            font-weight: bold;
+            fill-opacity: 0;
+            stroke: #484848;
+            stroke-width: 1;
+          }
+          &.social {
+            width: 80px;
+            a {
+              height: 80px;
+              width: 100%;
+              font-size: 33px;
+              .fa {
+                padding-top: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   ul {
     background-color: rgba(255,255,255,.7);
@@ -45,15 +124,6 @@ navbar {
         height: 90px;
         width: 90px;
         margin: 2px 0;
-      }
-      &.contact {
-        background-color: $brown;
-        border-right: 0;
-        margin-right: 2px;
-      }
-      &.linkedin {
-        background-color: $background2;
-        margin-right: 2px;
       }
     }
   }
@@ -68,13 +138,11 @@ navbar {
     width: 100%;
     height: 100%;
     height: 100vh;
-//    padding-top: 40px;
-//    border: 15px solid $gray;
     color: white;
   }
 }
 .title-container {
-  margin-top: 20px;
+  margin-top: 8%;
   .large {
     height: 170px;
     width: 630px;
@@ -82,5 +150,24 @@ navbar {
   }
   .small {
     display: none;
+  }
+//  h1 {
+//    font-size: 60px;
+//    margin-bottom: 0;
+//  }
+  .input-group {
+    input {
+      &:focus {
+      }
+    }
+    .input-group-btn {
+      height: 40px;
+      .btn {
+        height: 40px;
+        padding: 10px 12px;
+        font-size: 16px;
+        border: 1px solid white;
+      }
+    }
   }
 }

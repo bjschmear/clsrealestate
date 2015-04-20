@@ -3,23 +3,96 @@
 body {
 //  background-color: $gray;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
+h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 45px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
 a {
   color: inherit;
 }
 
 .content-container {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px;
+  display: table;
+  &.no-pad {
+    padding: 0;
+  }
+  &.full-width {
+    max-width: initial;
+  }
   .home-about {
-    border: 1px solid black;
-    height: 250px;
-    padding: 15px 0;
-    margin: 15px 0;
+    display: table;
+//    height: 250px;
     width: 100%;
     text-align: center;
+    color: white;
+    padding: 55px 0 75px;
+    h2 {
+      font-size: 25px;
+      margin: 0 0;
+    }
+    p {
+      max-width: 800px;
+      margin: 5px auto 0;
+      padding: 0 15px;
+    }
+  }
+  .list-container {
+    width: 100%;
+    min-height: 400px;
+    &.search {
+      background-image: url("../assets/images/find_home.jpeg");
+      background-size: cover;
+    }
+    &.list {
+      background-image: url("../assets/images/search_img.jpg");
+      background-size: cover;
+    }
+    .content-block {
+      color: white;
+      margin-top: 180px;
+      padding: 20px;
+      button {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 7px;
+        padding: 7px 12px;
+        &:hover {
+          background-color: white;
+          color: $background;
+        }
+      }
+    }
+  }
+}
+.blue-bg {
+  background-color: $background;
+}
+.blue-border {
+  border: 15px solid $background;
+  &.no-top {
+    border-top: 0;
+  }
+  &.no-bottom {
+    border-bottom: 0;
   }
 }
 
@@ -63,7 +136,12 @@ navbar {
         height: 40px;
         tr {
           td {
-            float: left;
+//            float: left;
+            white-space: nowrap;
+            padding-right: 2px;
+            &:last-child {
+              width:100%;
+            }
           }
         }
       }
@@ -72,32 +150,36 @@ navbar {
         td {
           position: relative;
           margin-right: 2px;
-
-          &.contact {
-            background-color: $brown;
-            border-right: 0;
+          color: $dark-gray;
+          &.title {
+            background-color: rgba(255,255,255, .7);
+            display: block;
+            height: 80px;
+            padding: 6px 2px 6px 10px;
           }
-          &.linkedin {
-
+          &.social {
+            padding-right: 2px;
+            width: 80px;
             a {
-              background-color: #0077b5;
-              margin-right: 2px;
+              background-color: rgba(255,255,255, .7);
               height: 100%;
               width: 100%;
+              display: block;
+              text-align: center;
+              font-size: 33px;
+              .fa {
+                padding-top: 24px;
+                color: gray;
+              }
             }
           }
-//          span.bg {
-//            position: absolute;
-//            height: 100%;
-//            width: 100%;
-//            background-color: rgba(255,255,255, .7);
-//          }
           a.bg {
             background-color: rgba(255,255,255, .7);
             height: 38px;
             display: inline-block;
             margin-top: 2px;
-            padding: 10px 15px;
+            padding: 8px 15px;
+            width: 100%;
           }
         }
       }
@@ -147,10 +229,12 @@ navbar {
 }
 
 .title-container {
-  margin: 0 auto;
+//  margin: 0 auto;
   display: block;
   @extend %vertical-align;
   width: 100%;
+  max-width: 600px;
+  margin-left: 15px;
   .large {
     height: 170px;
     width: 630px;
@@ -163,27 +247,17 @@ navbar {
     display: block;
     margin: 0 auto;
   }
-  .title {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 5s linear forwards;
-    -webkit-animation: draw 5s linear forwards;
-    -moz-animation: draw 5s linear forwards;
-    -o-animation: draw 5s linear forwards;
-    font-weight: bold;
-  }
   .input-group {
-    width: 60%;
-    min-width: 350px;
+    width: 100%;
+//    min-width: 350px;
     max-width: 600px;
-    margin: 15px auto;
+    padding: 0 30px 0 0;
     input {
       background-color: transparent;
       border: 1px solid white;
       height: 40px;
       padding: 10px 12px;
       font-size: 16px;
-//      color: white;
       &:focus {
         background-color: white;
       }
@@ -197,5 +271,14 @@ navbar {
         border: 1px solid white;
       }
     }
+  }
+}
+
+footer {
+  min-height: 150px;
+  padding-top: 50px;
+  background-color: $background2;
+  p {
+    margin: 0;
   }
 }
